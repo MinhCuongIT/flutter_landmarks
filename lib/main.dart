@@ -6,6 +6,7 @@ import 'package:landmarks_flutter/views/landmark_cell.dart';
 import 'package:landmarks_flutter/models/data.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   loadData().then((_) {
     runApp(MyApp());
   });
@@ -91,8 +92,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         context,
                         CupertinoPageRoute(
                           builder: (context) => LandmarkDetail(
-                                landmark: landmark,
-                              ),
+                            landmark: landmark,
+                          ),
                         ),
                       );
                     },
